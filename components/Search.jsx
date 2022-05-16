@@ -1,0 +1,18 @@
+import React from 'react'
+import {BsSearch} from 'react-icons/bs'
+import {BiMicrophone} from 'react-icons/bi'
+const Search = () => {
+  return (
+    <>
+    <div className="box-border  w-full m-auto mt-4 container">
+  <div className="box-border border p-2 w-full border-gray-300 flex items-center justify-center">
+        <BsSearch size={'20px'} className='inline cursor-pointer hover:drop-shadow'/>
+        <input type="search" className='w-full focus:outline-none pl-2 bg-transparent' placeholder='Search...'/>
+        <BiMicrophone size={'20px'} className='inline cursor-pointer hover:drop-shadow '/>
+      </div>
+  </div>
+    </>
+  )
+}
+
+export default Search
