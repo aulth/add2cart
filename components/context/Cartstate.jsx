@@ -39,12 +39,13 @@ const Cartstate = (props) => {
       localStorage.removeItem('a2c-subtotal');
     }
     const toggleCart = (ref)=>{
-    if(ref.current.classList.contains('translate-x-full')){
-      ref.current.classList.remove('translate-x-full')
-      ref.current.classList.add('translate-x-0')
+    if(ref.current.classList.contains('right-full')){
+      ref.current.classList.remove('right-full')
+      ref.current.classList.add('absolute')
+      ref.current.classList.add('right-0')
     }else{
-      ref.current.classList.remove('translate-x-0')
-      ref.current.classList.add('translate-x-full')
+      ref.current.classList.remove('right-0')
+      ref.current.classList.add('right-full')
     }
   }
  

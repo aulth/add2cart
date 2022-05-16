@@ -73,7 +73,7 @@ const Checkout = () => {
             <meta name="description" content={`Checkout your products`} />
                 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0" />
             </Head>
-                <Script type="application/javascript" crossorigin="anonymous" src={`${process.env.HOST}/merchantpgpui/checkoutjs/merchants/${process.env.MID}.js`} onload="onScriptLoad();" />
+                {/* <Script type="application/javascript" crossorigin="anonymous" src={`${process.env.HOST}/merchantpgpui/checkoutjs/merchants/${process.env.MID}.js`} onload="onScriptLoad();" /> */}
             <div className="container m-auto box-border md:p-5 p-2">
                 <h2 className="text-xl font-semibold">
                     Customer Details

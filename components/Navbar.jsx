@@ -77,7 +77,7 @@ const Navbar = ({ userLoggedIn }) => {
             <AiOutlineShoppingCart onClick={() => { toggleCart(cartRef) }} size={'30px'} className="mt-1" />
           </div>
         </div>
-        <div ref={cartRef} className="side-cart z-40 w-full absolute top-0 right-0 md:w-96 transition duration-200 translate-x-full">
+        <div ref={cartRef} className="side-cart z-40 w-full absolute top-0 md:w-96 transition duration-200  right-full">
           <div className=" box-border md:block flex flex-col items-center p-5 min-h-screen bg-gray-100 md:p-2 border border-gray-300  md:rounded-bl-xl md:rounded-tl-xl">
             <div style={{ height: '60px' }} className="absolute top-2 right-2 flex jusitfy-center items-center">
               <AiOutlineClose size={'30px'} onClick={() => { toggleCart(cartRef) }} className="m-auto cursor-pointer border border-gray-300 rounded font-normal text-gray-500 hover:text-white hover:bg-gray-300" />
@@ -118,8 +118,8 @@ const Navbar = ({ userLoggedIn }) => {
             }
             <div className="mt-5 flex">
               <Link href={'/checkout'}>
-                <button disabled={Object.keys(cart).length <= 0} className="box-border border border-gray-700 text-white p-2 bg-gray-700 hover:bg-transparent hover:text-black disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-black disabled:hover:text-black">
-                  <CgCheckO className="inline" /> Checkout
+                <button onClick={() => { toggleCart(cartRef) }} disabled={Object.keys(cart).length <= 0} className="box-border border border-gray-700 text-white p-2 bg-gray-700 hover:bg-transparent hover:text-black disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-black disabled:hover:text-black">
+                  <CgCheckO className="inline"   /> Checkout
                 </button>
               </Link>
               <button disabled={Object.keys(cart).length <= 0} onClick={clearCart} className="box-border p-2 border text-black border-gray-700 mx-2 hover:bg-gray-700 hover:text-white disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-black disabled:hover:text-black">
