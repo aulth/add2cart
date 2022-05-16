@@ -1,4 +1,4 @@
-import User from '../../models/user';
+import User from "../../models/User";
 import connectToDb from "../../middleware/mongoose";
 import bcrypt from 'bcryptjs';
 const handler = async (req, res)=>{

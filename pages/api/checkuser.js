@@ -1,6 +1,7 @@
 import connectToDb from "../../middleware/mongoose";
 import emailValidater from 'email-validator';
-import User from '../../models/user';
+import User from "../../models/User";
+
 const handler =async (req, res)=>{
     if(req.method!=='POST'){
         return res.status(405).json({success:false, msg:'Method not allowed'});
