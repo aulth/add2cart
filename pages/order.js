@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-const order = () => {
+const Order = () => {
   return (
     <>
      <Head>
@@ -39,4 +39,4 @@ const order = () => {
   )
 }
 
-export default order
+export default Order

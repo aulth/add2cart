@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { RiLockPasswordLine } from 'react-icons/ri'
 import {useRouter} from 'next/router'
 import Head from 'next/head'
-const forgot = () => {
+const Forgot = () => {
     const [user, setUser] = useState({ email: '', otp: '', password: '' })
     const [otpSent, setOtpSent] = useState(false)
     const [otp, setOtp] = useState('')
@@ -113,7 +113,7 @@ const forgot = () => {
                 <form className='flex w-full md:w-96 flex-col items-center'>
                     <img src="/logo.png" width={'140px'} className="pt-2" alt="logo" />
                     <h2 className="text-2xl font-bold pt-2 pb-4">
-                        Reset your account's password
+                        Reset your account password
                     </h2>
                     <div className="flex w-full border border-gray-200 my-2">
                         <AiOutlineUser size={'40px'} className="p-2 bg-gray-200" />
@@ -161,4 +161,4 @@ const forgot = () => {
     )
 }
 
-export default forgot
+export default Forgot

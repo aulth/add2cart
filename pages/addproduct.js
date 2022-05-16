@@ -2,7 +2,7 @@ import React , {useState} from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Head from 'next/head'
-const addproduct = () => {
+const Addproduct = () => {
     const [product, setProduct] = useState({productCode:'', name:'', price:0, description:'', image:'', category:'', quantity:1, color:'', size:'', key:'', brand:''})
     const [isImage, setIsImage] = useState(false)
     let uploadImage = async (e)=>{
@@ -175,4 +175,4 @@ const addproduct = () => {
   )
 }
 
-export default addproduct
+export default Addproduct

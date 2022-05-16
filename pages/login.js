@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import { ToastContainer, toast, Flip } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Head from 'next/head'
-const login = () => {
+const Login = () => {
     const router = useRouter()
     const [user, setUser] = useState({ emailorphone: '', password: '' })
     const handleOnChange = (e) => {
@@ -56,6 +56,7 @@ const login = () => {
         if (localStorage.getItem('authtoken')) {
             router.push('/')
         }
+        //eslint-disable-next-line
     }, [])
 
     return (
@@ -101,4 +102,4 @@ const login = () => {
     )
 }
 
-export default login
+export default Login

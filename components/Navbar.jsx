@@ -24,6 +24,7 @@ const Navbar = ({ userLoggedIn }) => {
       console.log(error)
       localStorage.clear()
     }
+    // eslint-disable-next-line
   }, [])
   const handleOnLogout = () => {
     localStorage.clear()

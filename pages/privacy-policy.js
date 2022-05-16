@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-const privacy = () => {
+const Privacy = () => {
     return (
         <>
          <Head>
@@ -151,4 +151,4 @@ const privacy = () => {
     )
 }
 
-export default privacy
+export default Privacy

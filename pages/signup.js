@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 import { ToastContainer, toast, Flip } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Head from 'next/head'
-const signup = () => {
+const Signup = () => {
     const router = useRouter()
     const [otpSent, setOtpSent] = useState(false)
     const [otp, setOtp] = useState('')
@@ -96,6 +96,7 @@ const signup = () => {
         if (localStorage.getItem('authtoken')) {
             router.push('/')
         }
+        // eslint-disable-next-line
     }, [])
 
     return (
@@ -167,4 +168,4 @@ const signup = () => {
     )
 }
 
-export default signup
+export default Signup

@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-const about = () => {
+const About = () => {
     return (
         <>
         <Head>
@@ -11,8 +11,8 @@ const about = () => {
                 <h1 className="text-xl font-semibold w-full border border-orange-300 text-orange-400 rounded   mt-2 h-20 flex items-center justify-center">About</h1>
                 <p className="text-lg p-2">
                     Welcome to {process.env.WEBSITE_NAME}, your number one source for all things Smartphone, Tshirt, Jacket, Kitchen &amp; acessories.
-                    We're dedicated to providing you the best of product, with a focus on dependability. customer service.
-                    We're working to turn our passion for product into a booming online store. We hope you enjoy our products as much as we enjoy offering them to you. Sincerely,
+                    We are dedicated to providing you the best of product, with a focus on dependability. customer service.
+                    We are working to turn our passion for product into a booming online store. We hope you enjoy our products as much as we enjoy offering them to you. Sincerely,
                 </p>
                 <br />
                 <p>
@@ -27,4 +27,4 @@ const about = () => {
     )
 }
 
-export default about
+export default About

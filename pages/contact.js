@@ -5,7 +5,7 @@ import {BsTelephone} from 'react-icons/bs'
 import { ToastContainer, toast, Flip } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Head from 'next/head'
-const contact = () => {
+const Contact = () => {
     const [contact, setContact] = useState({name:'', email:'', phone:'', message:''})
     const toastOption = {
         position: 'bottom-left',
@@ -82,4 +82,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

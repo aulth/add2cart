@@ -9,7 +9,7 @@ let storage = multer.diskStorage({
 })
 let upload = multer({storage:storage});
 
-export default (req, res)=>{
+export default handler = (req, res)=>{
     upload.single('image')(req, res, (err)=>{
         if(err){
             res.status(400).json({success:false, msg:err})

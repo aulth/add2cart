@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-const returnPolicy = () => {
+const ReturnPolicy = () => {
     return (
         <>
          <Head>
@@ -20,7 +20,7 @@ const returnPolicy = () => {
                     <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
                     <h3><strong>Definitions</strong></h3>
                     <p>For the purposes of this Return and Exchange Policy:</p>
-                    <p><strong>Individual</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to <strong>{process.env.WEBSITE_NAME}</strong> Located at <strong>IN</strong>.</p>
+                    <p><strong>Individual</strong>  refers to <strong>{process.env.WEBSITE_NAME}</strong> Located at <strong>IN</strong>.</p>
                     <p><strong>Goods</strong> refer to the items offered for sale on the Service.</p>
                     <p><strong>Orders</strong> mean a request by You to purchase Goods from Us.</p>
                     <p><strong>Service</strong> refers to the Website.</p>
@@ -60,4 +60,4 @@ const returnPolicy = () => {
     )
 }
 
-export default returnPolicy
+export default ReturnPolicy
