@@ -12,6 +12,9 @@ const nextConfig = {
     WEBSITE_NAME: process.env.WEBSITE_NAME,
     WEBSITE: process.env.WEBSITE,
     WEBSITE_EMAIL: process.env.WEBSITE_EMAIL,
+    CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
+    CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
+    CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET
   }
 }
 

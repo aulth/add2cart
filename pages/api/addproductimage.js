@@ -1,22 +1,30 @@
-import multer from "multer";
-let storage = multer.diskStorage({
-    destination: function (req, file, cb){
-        cb(null, './public/images');
-    },
-    filename: function (req, file, cb){
-        cb(null, file.originalname)
+import multer from 'multer';
+import {CloudinaryStorage} from 'multer-storage-cloudinary';
+const cloudinary = require('cloudinary').v2
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
+})
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params:{
+        folder: 'products'
     }
 })
-let upload = multer({storage:storage});
-
-export default handler = (req, res)=>{
-    upload.single('image')(req, res, (err)=>{
+const upload = multer({storage:storage})
+const handler = async (req, res)=>{
+    if(req.method !== 'POST'){
+        return res.status(400).json({success:false, msg:'Method not allowed'})
+    }
+    upload.single('image')(req, res, async err=>{
         if(err){
-            res.status(400).json({success:false, msg:err})
+            return res.status(400).json({success:false, msg:err.message})
         }
-        res.status(200).json({success:true, msg:"Image uploaded successfully", path:'/images/'+req.file.originalname})
+        return res.status(200).json({success:true, msg:'Image uploaded successfully', path:req.file.path})
     })
 }
+export default handler
 
 export const config = {
     api:{

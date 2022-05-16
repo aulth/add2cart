@@ -41,7 +41,7 @@ const Addproduct = () => {
     const handleOnChange = (e)=>{
         e.preventDefault()
         if(e.target.name==='name'){
-            setProduct({...product, name:e.target.value, productCode:e.target.value.toLowerCase().replace(/ /g, '-')})
+            setProduct({...product, name:e.target.value, productCode:e.target.value.toLowerCase().replace(/ /g, '-').replace(/[^\w-]+/g, '')})
         }else if(e.target.name==='image'){
             setProduct({...product, image:e.target.value})
             setIsImage(true)
