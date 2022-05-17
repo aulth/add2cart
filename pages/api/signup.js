@@ -41,7 +41,7 @@ const handler = async (req, res) => {
             return res.status(500).json({ success: false, msg: 'Something went wrong' });
         }
     } catch (error) {
-        return res.status(500).json({ success: false, msg: error.message });
+        return res.status(500).json({ success: false, msg: error.message  ,email:user.email, phone:user.phone, name:user.name});
     }
 }
 export default connectToDb(handler)

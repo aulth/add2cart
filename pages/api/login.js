@@ -25,6 +25,6 @@ const handler = async (req, res)=>{
         return res.status(400).json({success:false, msg:'Invalid password'});
     }
     let authtoken = jwt.sign({id:user._id, email:user.email, phone:user.phone}, process.env.JWT_SECRET, {expiresIn:'1d'});
-    return res.status(200).json({success:true, authtoken, msg:'Logged in successfully'})
+    return res.status(200).json({success:true, authtoken, msg:'Logged in successfully', email:user.email, phone:user.phone, name:user.name});
 }
 export default connectToDb(handler)

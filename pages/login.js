@@ -6,13 +6,13 @@ import { useRouter } from 'next/router'
 import { ToastContainer, toast, Flip } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 import Head from 'next/head'
+import {getCookie, setCookies} from 'cookies-next'
 const Login = () => {
     const router = useRouter()
     const [user, setUser] = useState({ emailorphone: '', password: '' })
     const handleOnChange = (e) => {
         e.preventDefault()
         setUser({ ...user, [e.target.name]: e.target.value })
-        console.log(user)
     }
     const handleOnLogin = async (e) => {
         e.preventDefault();
@@ -26,6 +26,10 @@ const Login = () => {
         let data = await response.json()
         if (data.success) {
             localStorage.setItem('authtoken', data.authtoken);
+            setCookies('authtoken', data.authtoken)
+            localStorage.setItem('add2cart_name', data.name);
+            localStorage.setItem('add2cart_email', data.email);
+            localStorage.setItem('add2cart_contact', data.phone);
             toast.success(data.msg, {
                 position: 'bottom-left',
                 autoClose: 2000,
@@ -56,6 +60,8 @@ const Login = () => {
         if (localStorage.getItem('authtoken')) {
             router.push('/')
         }
+        console.log(getCookie('authtoken'))
+
         //eslint-disable-next-line
     }, [])
 

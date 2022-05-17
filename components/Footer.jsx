@@ -1,6 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import {removeCookies} from 'cookies-next'
 const Footer = () => {
+  const handleOnLogout = () => {
+    localStorage.clear()
+    removeCookies('authtoken')
+    window.location.reload()
+  }
   return (
     <>
    {/* component */}
@@ -8,7 +14,7 @@ const Footer = () => {
   <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
       <div>
-        <img src="/logousman.png" className="mr-5 h-6 sm:h-9" alt="logo" />
+        <img src="/logo.png" className="mr-5 h-6 sm:h-9" alt="logo" />
         <p className="max-w-xs mt-4 text-sm text-gray-600">
           Online ecommerce pltform for all your needs.
         </p>
@@ -75,8 +81,10 @@ const Footer = () => {
           </p>
           <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
             <Link href={'/contact'}><a className="hover:opacity-75 cursor-pointer"> Contact </a></Link>
-            <a className="hover:opacity-75 cursor-pointer" > FAQs </a>
-            <Link href={'/addproduct'}><a className="hover:opacity-75 cursor-pointer"> Add Product </a></Link>
+            {/* <a className="hover:opacity-75 cursor-pointer" > FAQs </a> */}
+            <a onClick={handleOnLogout} className="hover:opacity-75 cursor-pointer inline"> Logout</a>
+            <Link href={'/orders'}><a className="hover:opacity-75 cursor-pointer"> Orders </a></Link>
+            <Link href={'/account'}><a className="hover:opacity-75 cursor-pointer"> Account </a></Link>
           </nav>
         </div>
         <div>
@@ -95,6 +103,8 @@ const Footer = () => {
     <p className="mt-8 text-xs text-gray-800">
       © 2022 {process.env.WEBSITE_NAME[0].toLocaleUpperCase()+process.env.WEBSITE_NAME.slice(1)}
     </p>
+    
+
   </div>
 </footer>
 

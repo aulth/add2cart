@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ToastContainer, toast, Flip } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import { setCookies } from 'cookies-next'
 import Head from 'next/head'
 const Signup = () => {
     const router = useRouter()
@@ -39,7 +40,12 @@ const Signup = () => {
         })
         let data = await response.json()
         if (data.success) {
+            setCookies('authtoken', data.authtoken)
             localStorage.setItem('authtoken', data.authtoken);
+            localStorage.setItem('authtoken', data.authtoken);
+            localStorage.setItem('add2cart_name', data.name);
+            localStorage.setItem('add2cart_email', data.email);
+            localStorage.setItem('add2cart_contact', data.contact);
             toast.success(data.msg,toastOption)
             router.push('/')
         } else {

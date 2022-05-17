@@ -12,10 +12,10 @@ const Item = ({ response }) => {
   const router = useRouter()
   const item = router.query.item
   const { addToCart, cartRef, toggleCart, clearCart, saveCart } = useContext(Cartcontext)
-  const buyNow = (productCode, quantity, price, name) => {
+  const buyNow = (productCode, quantity, price, name, image) => {
     clearCart();
     let newCart = {}
-    newCart[productCode] = { productCode, quantity, price, name };
+    newCart[productCode] = { productCode, quantity, price, name , image};
     console.log(newCart)
     saveCart(newCart)
     router.push('/checkout')
@@ -33,7 +33,7 @@ const Item = ({ response }) => {
           <section className="text-gray-600 body-font overflow-hidden">
             <div className="container px-5 py-10 mx-auto">
               <div className="lg:w-4/5 mx-auto flex flex-wrap">
-                <img alt="ecommerce" className="lg:w-1/2 w-full h-full h-64 object-cover object-top rounded " src={response.image} />
+                <img alt="ecommerce" className="lg:w-1/2 w-full h-full object-cover object-top rounded " src={response.image} />
                 <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                   <h2 className="text-sm title-font text-gray-500 tracking-widest">{response.brand ? response.brand : ''}</h2>
                   <h1 className="text-gray-900 text-3xl title-font font-medium mb-1">{response.name}</h1>
@@ -114,7 +114,7 @@ const Item = ({ response }) => {
             </svg>
           </button> */}
                   </div>
-                  <button onClick={() => { buyNow(item, 1, response.price, response.name), () => { if (cartRef.current.classList.contains('translate-x-full')) { toggleCart(cartRef) } } }} className="flex w-full mt-2 justify-center text-orange-500 border border-orange-500 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded hover:text-white">Buy Now</button>
+                  <button onClick={() => { buyNow(item, 1, response.price, response.name, response.image), () => { if (cartRef.current.classList.contains('right-full')) { toggleCart(cartRef) } } }} className="flex w-full mt-2 justify-center text-orange-500 border border-orange-500 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded hover:text-white">Buy Now</button>
 
                 </div>
               </div>

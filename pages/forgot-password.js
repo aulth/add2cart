@@ -132,7 +132,7 @@ const Forgot = () => {
                             </div>
                             <div className="flex flex-col w-full md:flex-row">
                                 <button className='w-full md:1/2 mr-1 text-center p-1 border text-gray-500 border-gray-300 rounded  cursor-pointer hover:bg-gray-300' onClick={verifyOtp}>Verify OTP</button>
-                                <button className='w-full md:1/2 ml-1 text-center p-1 border text-gray-500 border-gray-300 rounded  cursor-pointer hover:bg-gray-300' onClick={resendOtp}>Resend OTP</button>
+                                <button className='w-full md:1/2 md:ml-1 text-center p-1 border text-gray-500 border-gray-300 rounded  cursor-pointer hover:bg-gray-300' onClick={resendOtp}>Resend OTP</button>
                             </div>
                         </>
                     }

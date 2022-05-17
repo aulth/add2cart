@@ -1,17 +1,26 @@
 import mongoose from "mongoose";
 const OrderSchema = new mongoose.Schema({
     user:{
-        type: string
+        type: String
     },
     products: {
         type: Array
     },
-    totalPrice: {
+    orderid:{
+        type: String
+    },
+    amount: {
         type: Number
     },
     status :{
         type: String,
         default: "Pending"
+    },
+    address:{
+        type: String
+    },
+    order: {
+        type: String,
     }
 }, {
     timestamps:true
