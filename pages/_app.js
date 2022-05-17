@@ -12,7 +12,7 @@ import "nprogress/nprogress.css"
 function MyApp({ Component, pageProps }) {
   const [userLoggedIn, setUserLoggedIn] = useState(false)
   let searchBarFree = ['/login', '/signup', '/forgot-password', '/product/[item]', '/about', '/services-products', '/contact', '/checkout']
-  NProgress.configure({ color: '#orange' })
+  NProgress.configure({ showSpinner: false })
   Router.onRouteChangeStart = ()=>{
     NProgress.start()
   }

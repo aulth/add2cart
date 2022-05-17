@@ -6,8 +6,8 @@ const handler = async (req, res)=>{
         return res.status(405).send('Method not allowed');
     }
     const razorpay = new Razorpay({
-        key_id:'rzp_live_jEJDzEl5vQWKQn',
-        key_secret:'wvOXAGIoVxJEbHh9vgwYcUBC'
+        key_id:process.env.RAZOR_KEY_ID,
+        key_secret:process.env.RAZOR_KEY_SECRET
     })
     const {authtoken} = req.body;
     if(!authtoken){
