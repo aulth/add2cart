@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Add2Cart
+eCommerce Platform
 
-First, run the development server:
+![Logo](https://mohd-usman.vercel.app/logo.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Authors
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [@aulth](https://www.github.com/aulth)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions are always welcome!
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+See `contributing.md` for ways to get started.
 
-## Deploy on Vercel
+Please adhere to this project's `code of conduct`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Demo
+https://mohd-usman.vercel.app
+
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`MONGOURI`
+`JWT_SECRET`
+`ADD_KEY=1981`
+`EMAIL_PASS`
+`EMAIL_USER`
+`WEBSITE`
+`WEBSITE_NAME`
+`WEBSITE_EMAIL`
+`CLOUDINARY_CLOUD_NAME`
+`CLOUDINARY_API_KEY`
+`CLOUDINARY_API_SECRET`
+`RAZOR_KEY_ID`
+`RAZOR_KEY_SECRET`
+
+
+## Features
+
+- Login / Sign up / Logout / Password Reset
+- Add to cart / Buy now
+- Category wise products
+- RazorPay Payment Gateway
+
+
+## Screenshots
+
+![App Screenshot](https://aulth.github.io/usman/add2cart.png)
+
+
+## Tech Stack
+
+Nodejs, ReactJs, NextJs, MongoDB, Vercel, TailwindCSS
+
