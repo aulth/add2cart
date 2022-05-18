@@ -114,7 +114,7 @@ const Item = ({ response }) => {
             </svg>
           </button> */}
                   </div>
-                  <button onClick={() => { buyNow(item, 1, response.price, response.name, response.image), () => { if (cartRef.current.classList.contains('right-full')) { toggleCart(cartRef) } } }} className="flex w-full mt-2 justify-center text-orange-500 border border-orange-500 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded hover:text-white">Buy Now</button>
+                  <button onClick={() => { buyNow(item, 1, response.price, response.name, response.image), () => { if (cartRef.current.classList.contains('translate-x-full')) { toggleCart(cartRef) } } }} className="flex w-full mt-2 justify-center text-orange-500 border border-orange-500 py-2 px-6 focus:outline-none hover:bg-orange-400 rounded hover:text-white">Buy Now</button>
 
                 </div>
               </div>

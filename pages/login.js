@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { AiOutlineUser } from 'react-icons/ai'
 import { RiLockPasswordLine } from 'react-icons/ri'
+import {BsEye, BsEyeSlash} from 'react-icons/bs'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { ToastContainer, toast, Flip } from 'react-toastify'
@@ -10,6 +11,7 @@ import {getCookie, setCookies} from 'cookies-next'
 const Login = () => {
     const router = useRouter()
     const [user, setUser] = useState({ emailorphone: '', password: '' })
+    const [passwordVisible, setPasswordVisible] = useState(false)
     const handleOnChange = (e) => {
         e.preventDefault()
         setUser({ ...user, [e.target.name]: e.target.value })
@@ -56,6 +58,18 @@ const Login = () => {
             })
         }
     }
+
+    const showPassword = ()=>{
+        let elem = document.getElementById('password')
+        if(elem.type=='password'){
+            setPasswordVisible(true)
+            elem.type='text'
+        }else{
+            setPasswordVisible(false)
+            elem.type='password'
+        }
+    }
+
     useEffect(() => {
         if (localStorage.getItem('authtoken')) {
             router.push('/')
@@ -84,7 +98,13 @@ const Login = () => {
                     </div>
                     <div className="flex w-full border border-gray-200 my-2">
                         <RiLockPasswordLine size={'40px'} className="p-2 bg-gray-200" />
-                        <input type="password" onChange={handleOnChange} name='password' className='p-2 w-full focus:outline-none' placeholder='Password' />
+                        <input type="password" id='password' onChange={handleOnChange} name='password' className='p-2 w-full focus:outline-none' placeholder='Password' />
+                        {
+                            !passwordVisible && <BsEye onClick={showPassword} size={'40px'} className="p-2 bg-gray-200 cursor-pointer" />
+                        }
+                        {
+                            passwordVisible && <BsEyeSlash onClick={showPassword} size={'40px'} className="p-2 bg-gray-200 cursor-pointer" />
+                        }
                     </div>
                     <button type='submit' className="w-full p-2 text-lg hover:text-white font-semibold text-orange-400 rounded my-2 border border-orange-400 hover:bg-orange-300 focus:bg-orange-500">
                         Login

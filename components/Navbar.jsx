@@ -36,7 +36,7 @@ const Navbar = ({ userLoggedIn }) => {
       <header className="text-gray-600 body-font shadow sticky top-0 bg-white z-30 ">
         <div className="container mx-auto flex flex-wrap p-1 md:flex-row items-center justify-between ">
           <Link href={"/"}>
-            <div className="flex">
+            <div className="flex cursor-pointer">
               <img src="/logo.png" alt="logo" className="align-middle" width={"180px"} />
             </div>
           </Link>
@@ -78,7 +78,7 @@ const Navbar = ({ userLoggedIn }) => {
             <AiOutlineShoppingCart onClick={() => { toggleCart(cartRef) }} size={'30px'} className="mt-1" />
           </div>
         </div>
-        <div ref={cartRef} className="side-cart z-40 w-full absolute top-0 md:w-96 transition duration-200  right-full">
+        <div ref={cartRef} className="side-cart z-40 w-full absolute top-0 right-0 md:w-96 transition duration-200  translate-x-full">
           <div className=" box-border md:block flex flex-col items-center p-5 h-screen bg-gray-100 md:p-2  border border-gray-300  md:rounded-bl-xl md:rounded-tl-xl overflow-y-scroll">
             <div style={{ height: '60px' }} className="absolute top-2 right-6 flex jusitfy-center items-center">
               <AiOutlineClose size={'30px'} onClick={() => { toggleCart(cartRef) }} className="m-auto cursor-pointer border border-gray-300 rounded font-normal text-gray-500 hover:text-white hover:bg-gray-300" />

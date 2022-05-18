@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { AiOutlineUser, AiOutlineMail } from 'react-icons/ai'
 import { RiLockPasswordLine } from 'react-icons/ri'
+import {BsEye, BsEyeSlash} from 'react-icons/bs'
 import { MdOutlineCall } from 'react-icons/md'
 import { BsKey } from 'react-icons/bs'
 import Link from 'next/link'
@@ -15,6 +16,7 @@ const Signup = () => {
     const [otp, setOtp] = useState('')
     const [isEmailVerified, setIsEmailVerified] = useState(false)
     const [user, setUser] = useState({ name: '', email: '', phone: '', password: '', otp: '' })
+    const [passwordVisible, setPasswordVisible] = useState(false)
     const toastOption = {
         position: 'bottom-left',
         autoClose: 2000,
@@ -98,6 +100,16 @@ const Signup = () => {
             toast.error('OTP not matched', toastOption)
         }
     }
+    const showPassword = ()=>{
+        let elem = document.getElementById('password')
+        if(elem.type=='password'){
+            setPasswordVisible(true)
+            elem.type='text'
+        }else{
+            setPasswordVisible(false)
+            elem.type='password'
+        }
+    }
     useEffect(() => {
         if (localStorage.getItem('authtoken')) {
             router.push('/')
@@ -139,7 +151,7 @@ const Signup = () => {
                             </div>
                             <div className="flex flex-col w-full md:flex-row">
                                 <button className='w-full md:1/2 mr-1 text-center p-1 border text-gray-500 border-gray-300 rounded  cursor-pointer hover:bg-gray-300' onClick={verifyOtp}>Verify OTP</button>
-                                <button className='w-full md:1/2 ml-1 text-center p-1 border text-gray-500 border-gray-300 rounded  cursor-pointer hover:bg-gray-300' onClick={resendOtp}>Resend OTP</button>
+                                <button className='w-full md:1/2 md:ml-1 text-center p-1 border text-gray-500 border-gray-300 rounded  cursor-pointer hover:bg-gray-300' onClick={resendOtp}>Resend OTP</button>
                             </div>
                         </>
                     }
@@ -149,7 +161,13 @@ const Signup = () => {
                     </div>
                     <div className="flex w-full border border-gray-200 my-2">
                         <RiLockPasswordLine size={'40px'} className="p-2 bg-gray-200" />
-                        <input type="password" name='password' onChange={handleOnChange} className='p-2 w-full focus:outline-none' placeholder='Password' required/>
+                        <input type="password" id='password' name='password' onChange={handleOnChange} className='p-2 w-full focus:outline-none' placeholder='Password' required/>
+                        {
+                            !passwordVisible && <BsEye onClick={showPassword} size={'40px'} className="p-2 bg-gray-200 cursor-pointer" />
+                        }
+                        {
+                            passwordVisible && <BsEyeSlash onClick={showPassword} size={'40px'} className="p-2 bg-gray-200 cursor-pointer" />
+                        }
                     </div>
                     <button disabled={!isEmailVerified} className={`w-full ${!isEmailVerified ? 'bg-gray-400 cursor-not-allowed text-white' : 'hover:text-white text-orange-400 border-orange-400 hover:bg-orange-300 focus:bg-orange-500 '} p-2 text-lg  font-semibold rounded my-2 border  `}>
                         Signup

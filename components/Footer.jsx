@@ -58,6 +58,7 @@ const Footer = () => {
           </p>
           <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
             <Link href={'/about'} ><a className="hover:opacity-75 cursor-pointer"> About </a></Link>
+            <Link href={'/contact'}><a className="hover:opacity-75 cursor-pointer"> Contact </a></Link>
             <Link href={'/services-products'} ><a className="hover:opacity-75 cursor-pointer"> Services / Products </a></Link>
             {/* <a className="hover:opacity-75" href> History </a> */}
             {/* <a className="hover:opacity-75" href> Careers </a> */}
@@ -80,8 +81,8 @@ const Footer = () => {
             Helpful Links
           </p>
           <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-            <Link href={'/contact'}><a className="hover:opacity-75 cursor-pointer"> Contact </a></Link>
             {/* <a className="hover:opacity-75 cursor-pointer" > FAQs </a> */}
+            <Link href={'/addproduct'}><a className="hover:opacity-75 cursor-pointer"> Add Product </a></Link>
             <a onClick={handleOnLogout} className="hover:opacity-75 cursor-pointer inline"> Logout</a>
             <Link href={'/orders'}><a className="hover:opacity-75 cursor-pointer"> Orders </a></Link>
             <Link href={'/account'}><a className="hover:opacity-75 cursor-pointer"> Account </a></Link>

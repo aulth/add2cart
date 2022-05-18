@@ -22,7 +22,7 @@ const ProductItem = ({ product }) => {
   return (
     <>
       <div className="lg:w-1/4 md:w-1/2 p-4 w-full relative product-card border border-white rounded-lg">
-        <BsCartPlus onClick={() => { addToCart(product.productCode, 1, product.price, product.name, product.image); if(cartRef.current.classList.contains('right-full')){toggleCart(cartRef)}; showToast()}} className='absolute top-4 left-4 z-10 bg-orange-400 text-white p-1 cursor-pointer hover:bg-orange-300 rounded-br-xl' size={'40px'} />
+        <BsCartPlus onClick={() => { addToCart(product.productCode, 1, product.price, product.name, product.image); if(cartRef.current.classList.contains('translate-x-full')){toggleCart(cartRef)}; showToast()}} className='absolute top-4 left-4 z-10 bg-orange-400 text-white p-1 cursor-pointer hover:bg-orange-300 rounded-br-xl' size={'40px'} />
         <Link href={`/product/${product.productCode}`}>
           <a>
         <div className="block relative h-48 rounded overflow-hidden">
