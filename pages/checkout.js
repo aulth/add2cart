@@ -48,7 +48,7 @@ const Checkout = () => {
                 description += `${cart[key].name.slice(0,12)}..X${cart[key].quantity}`
             }
             var options = {
-                key:'rzp_live_jEJDzEl5vQWKQn',
+                key:process.env.RAZOR_KEY_ID,
                 name:'Add2Cart',
                 currency:data.currency,
                 amount:data.amount,
