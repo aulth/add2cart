@@ -7,7 +7,8 @@ const Sitemap = () => {
 
 export async function getServerSideProps(context){
     context.res.setHeader('Content-Type', 'text/xml')
-    let staticPath = ['about.js','account.js','addproduct.js','checkout.js','contact.js','forgot-password.js','index.js','login.js','orders.js','privacy-policy.js','return-refund-policy.js','services-products.js','signup.js','sitemap.xml.js','terms-conditions.js'].map((item=>{return `${process.env.WEBSITE}/${item}`}))
+    let staticPath = fs.readdirSync('pages').filter((item=>{return !['_app.js', 'api', 'order', 'category', 'product', 'sitemap.xml.js'].includes(item)})).map(item=>{return `${process.env.WEBSITE}/${item}`})
+    // let staticPath = ['about.js','account.js','addproduct.js','checkout.js','contact.js','forgot-password.js','index.js','login.js','orders.js','privacy-policy.js','return-refund-policy.js','services-products.js','signup.js','sitemap.xml.js','terms-conditions.js'].map((item=>{return `${process.env.WEBSITE}/${item}`}))
     if(!mongoose.connections[0].readyState){
         await mongoose.connect(process.env.MONGOURI);
     }
