@@ -1,4 +1,3 @@
-import fs from 'fs'
 import mongoose from 'mongoose'
 import Product from "../models/Product";
 const Sitemap = () => {
