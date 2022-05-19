@@ -41,17 +41,17 @@ const Navbar = ({ userLoggedIn }) => {
             </div>
           </Link>
           <nav className="md:ml-auto md:mr-auto md:flex flex-wrap items-center text-base justify-center hidden">
-            <Link href={"/category/smartphone"}>
-              <a className="mr-5 hover:text-gray-900">Smartphone</a>
+            <Link href={"/category/physics"}>
+              <a className="mr-5 hover:text-gray-900">Physics</a>
             </Link>
-            <Link href={"/category/wearable"}>
-              <a className="mr-5 hover:text-gray-900">Wearable</a>
+            <Link href={"/category/chemistry"}>
+              <a className="mr-5 hover:text-gray-900">Chemistry</a>
             </Link>
-            <Link href={"/category/kitchen-home"}>
-              <a className="mr-5 hover:text-gray-900">Kitchen and Home</a>
+            <Link href={"/category/mathematics"}>
+              <a className="mr-5 hover:text-gray-900">Math</a>
             </Link>
-            <Link href={"/category/accessories"}>
-              <a className="mr-5 hover:text-gray-900">Accessories</a>
+            <Link href={"/category/javascript"}>
+              <a className="mr-5 hover:text-gray-900">Javascrip</a>
             </Link>
           </nav>
           <div className="cursor-pointer flex ">

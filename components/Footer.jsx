@@ -16,7 +16,7 @@ const Footer = () => {
       <div>
         <img src="/logo.png" className="mr-5 h-6 sm:h-9" alt="logo" />
         <p className="max-w-xs mt-4 text-sm text-gray-600">
-          Online ecommerce pltform for all your needs.
+          Online eCommerce Platform for all your needs.
         </p>
         <div className="flex mt-8 space-x-6 text-gray-600 ">
           <a className="hover:opacity-75" href="/" target="_blank" rel="noreferrer">
@@ -69,11 +69,11 @@ const Footer = () => {
             Categories
           </p>
           <nav className="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-            <Link href={'/category/smartphone'}><a className="hover:opacity-75" > Smartphone </a></Link>
-            <Link href={'/category/tshirt'}><a className="hover:opacity-75"> Tshirt </a></Link>
+            <Link href={'/category/physics'}><a className="hover:opacity-75" > Physics </a></Link>
+            <Link href={'/category/chemistry'}><a className="hover:opacity-75"> Chemistry </a></Link>
             {/* <a className="hover:opacity-75" href> Jacket </a> */}
             {/* <a className="hover:opacity-75" href> Shirt </a> */}
-            <Link href={'/category/kitchen-home'}><a className="hover:opacity-75" > Kitchen &amp; Home </a></Link>
+            <Link href={'/category/mathematics'}><a className="hover:opacity-75" > Mathematics </a></Link>
           </nav>
         </div>
         <div>
