@@ -7,8 +7,7 @@ const Sitemap = () => {
 
 export async function getServerSideProps(context){
     context.res.setHeader('Content-Type', 'text/xml')
-    let staticPath = fs.readdirSync('pages').filter((item)=>{return !['sitemap.xml.js', '_app.js', 'addproduct.js', 'order', 'api', 'category', 'product'].includes(item)}).map((item=>{return `${process.env.WEBSITE}/${item}`}))
-    staticPath = staticPath.filter(item=>{return !['_app.js', 'api', 'order'].includes(item)})
+    let staticPath = ['about.js','account.js','addproduct.js','checkout.js','contact.js','forgot-password.js','index.js','login.js','orders.js','privacy-policy.js','return-refund-policy.js','services-products.js','signup.js','sitemap.xml.js','terms-conditions.js'].map((item=>{return `${process.env.WEBSITE}/${item}`}))
     if(!mongoose.connections[0].readyState){
         await mongoose.connect(process.env.MONGOURI);
     }
@@ -22,9 +21,6 @@ export async function getServerSideProps(context){
     })
     context.res.write('</urlset>')
     context.res.end()
-
-    // console.log(productPath)
-    // console.log(product);
     return {
         props:{
             product:{}
