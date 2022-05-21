@@ -76,7 +76,9 @@ const Contact = () => {
             Sant Kabir Nagar, Uttar Pradesh 272199
             <br />
         </div>
-        <a href={`mailto:${process.env.WEBSITE_EMAIL}`}>{process.env.WEBSITE_EMAIL}</a>
+        <a href="tel:9839872992" className='block'>9839872992</a>
+        <a href={`mailto:mohdusman.you@gmail.com`}>mohdusman.you@gmail.com</a>
+        {/* <a href={`mailto:${process.env.WEBSITE_EMAIL}`}>{process.env.WEBSITE_EMAIL}</a> */}
     </div>
     </>
   )

@@ -96,6 +96,7 @@ const Footer = () => {
             <Link href={'/privacy-policy'}><a className="hover:opacity-75 cursor-pointer" > Privacy Policy </a></Link>
             <Link href={'/terms-conditions'}><a className="hover:opacity-75 cursor-pointer" > Terms &amp; Conditions </a></Link>
             <Link href={'/return-refund-policy'}><a className="hover:opacity-75 cursor-pointer" > Returns / Refund / Cancellation Policy </a></Link>
+            <Link href={'/shipping-policy'}><a className="hover:opacity-75 cursor-pointer" > Shipping Policy </a></Link>
             {/* <a className="hover:opacity-75" href> Accessibility </a> */}
           </nav>
         </div>

@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import mongoose from 'mongoose'
 import Order from "../../models/Order";
 import { BiRupee } from 'react-icons/bi'
+import {AiOutlineCheck} from 'react-icons/ai'
+import {GiSandsOfTime} from 'react-icons/gi'
 import Head from 'next/head'
 const Orderhandler = ({ order, products, orderid }) => {
     useEffect(() => {
@@ -38,7 +40,29 @@ const Orderhandler = ({ order, products, orderid }) => {
                                     <button className="flex ml-auto text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded">Track order</button>
                                 </div>
                             </div>
-                            <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded  md:ml-4" src="https://c.tenor.com/xVfFIHxAzW4AAAAC/success.gif" />
+                            {/* <img alt="ecommerce" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded  md:ml-4" src="https://c.tenor.com/xVfFIHxAzW4AAAAC/success.gif" /> */}
+                            <div  className="lg:w-1/2 mb-20 md:mb-0 w-full lg:h-auto h-64 object-cover object-center rounded  md:ml-4" >
+                               <div className="w-full border border-gray-400 flex  p-2">
+                                    <div className="rounded-full w-12 h-12 bg-orange-200 flex justify-center items-center"><AiOutlineCheck className='text-orange-400' size={'30px'}/></div>
+                                    <div className="w-full p-2 text-xl flex items-center font-semibold text-black">Order Placed</div>
+                               </div>
+                               <div className="w-full border border-gray-400 flex  p-2">
+                                    <div className="rounded-full w-12 h-12 bg-orange-200 flex justify-center items-center"><GiSandsOfTime className='text-orange-400' size={'30px'}/></div>
+                                    <div className="w-full p-2 text-xl flex items-center ">Order Confirmed</div>
+                               </div>
+                               <div className="w-full border border-gray-400 flex  p-2">
+                                    <div className="rounded-full w-12 h-12 bg-orange-200 flex justify-center items-center"><GiSandsOfTime className='text-orange-400' size={'30px'}/></div>
+                                    <div className="w-full p-2 text-xl flex items-center">Shipped</div>
+                               </div>
+                               <div className="w-full border border-gray-400 flex  p-2">
+                                    <div className="rounded-full w-12 h-12 bg-orange-200 flex justify-center items-center"><GiSandsOfTime className='text-orange-400' size={'30px'}/></div>
+                                    <div className="w-full p-2 text-xl flex items-center">Out For Delivery</div>
+                               </div>
+                               <div className="w-full border border-gray-400 flex  p-2">
+                                    <div className="rounded-full w-12 h-12 bg-orange-200 flex justify-center items-center"><GiSandsOfTime className='text-orange-400' size={'30px'}/></div>
+                                    <div className="w-full p-2 text-xl flex items-center">Delivered</div>
+                               </div>
+                                </div>
                         </div>
                     }
                     {
