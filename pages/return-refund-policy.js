@@ -10,7 +10,7 @@ const ReturnPolicy = () => {
             <div className="container m-auto text-lg p-2">
                 <div>
                     <h1><strong>RETURN AND EXCHANGE POLICY</strong></h1>
-                    Last Updated: 5/16/2022
+                    Last Updated: 5/22/2022
                     <p>Thank you for shopping at <strong>{process.env.WEBSITE}</strong></p>
                     <p>If, for any reason, You are not completely satisfied with a purchase, we invite You to review our Policy. </p>
                     <p>The following terms are applicable for any products that you purchased with us.</p><br />
