@@ -50,9 +50,12 @@ const ReturnPolicy = () => {
                     If you select an item with a higher value compared to the item your exchange, we will ask you to pay the price difference. In case the value is lower, we will credit you with the difference..
                     <h3><strong>HOW TO INITIATE A RETURN</strong></h3>
                     <p>If you have a request for Return, Refund or Exchange and if you have further clarification and questions, Please do not hesitate to contact us through our:</p>
-                    <p>Email Address: <span style={{ color: '#000080' }}><strong>{process.env.WEBSITE_EMAIL}</strong></span></p>
+                    {/* <p>Email Address: <span style={{ color: '#000080' }}><strong>{process.env.WEBSITE_EMAIL}</strong></span></p> */}
+                    <p>Email Address: <span style={{ color: '#000080' }}><strong>mohdusman.you@gmail.com</strong></span></p>
                     <p>Contact Form URL: <span style={{ color: '#000080' }}><strong>{process.env.WEBSITE}/contact</strong></span></p>
                     <p>You will be updated for their Return Status through their<strong> EMAIL, PHONE,</strong> and <strong>SMS</strong> provided that all contact information is recorded to us.</p>
+                    <h2><strong>Cancellation Policy</strong></h2>
+                        <p>We do not accept cancellation of order. You can return the product once it is delivered.</p>
                 </div>
 
             </div>
